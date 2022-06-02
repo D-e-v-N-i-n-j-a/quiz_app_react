@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url('./images/bg.jpg');
+  
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+ 
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App{
+  width: 400px;
+  height: 300px;
+  background-color: #00789B;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.App .header{
+  font-family: 'tahoma';
+  color: white;
+  font-size: 24px;
+}
+form{
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+.username_text{
+  font-size: 14x;
+  color: black;
+}
+.error_message{
+  position: absolute;
+  top: -50%;
+  width: 50%;
+  height: 40px;
+  border: 5px;
+  padding: 5px 10px;
+  background-color: green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.4s ease-in;
+}
+.hide_error{
+  position: absolute;
+  top: 10px;
+  width: 50%;
+  height: 40px;
+  border: 5px;
+  padding: 5px 10px;
+  background-color: sandybrown;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.4s ease-in;
+}
+.wrapper{
+  width: 70%;
+  height: 40px;
+  background: white;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  position: relative;
+  justify-content: center;
+  border-radius: 10px;
+  border-bottom: 1px solid silver;
+}
+.input-data{
+  width: 90%;
+}
+.view{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+input{
+  width: 90%;
+  border: none;
+  padding: 10px;
+  outline: none;
+  border-bottom: 1px solid silver;
+}
+.icon_font{
+  position: absolute;
+  left: 10px;
+  display: flex;
+  top: 10px;
+  align-items: center;
+  color: tomato;
+}
+
+.login_btn{
+  padding: 10px 20px;
+  width: 200px;
+  margin-top: 1rem;
+  border: none;
+  background-color: tomato;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.close_btn{
+  padding: 10px;
+  background-color: tomato;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0;
+}
+.error_icon{
+  color: white;
+  font-size: 20px;
+}
+
+
+
+
