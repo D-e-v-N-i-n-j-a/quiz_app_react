@@ -1,143 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --color-bg: #1f1f38;
+  --color-bg-variant: #2c2c6c;
+  --color-primary: #4db5ff;
+  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.6);
+  --container-width-lg: 75%;
+  --transition: all 400ms ease;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: url('./images/bg.jpg');
-  
-  position: absolute;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
- 
-
+  background: var(--color-bg);
+  color: var(--color-white);
+  line-height: 1.7;
+  background-image: url("./assets/bg-texture.png");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ========================GENERAL STYLE============================= */
+
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
 }
 
-.App{
-  width: 400px;
-  height: 300px;
-  background-color: #00789B;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+section {
+  margin-top: 8rem;
+}
+
+section > h2,
+section > h5 {
   text-align: center;
+  color: var(--color-light);
 }
 
-.App .header{
-  font-family: 'tahoma';
-  color: white;
-  font-size: 24px;
-}
-form{
- width: 100%;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
-}
-.username_text{
-  font-size: 14x;
-  color: black;
-}
-.error_message{
-  position: absolute;
-  top: -50%;
-  width: 50%;
-  height: 40px;
-  border: 5px;
-  padding: 5px 10px;
-  background-color: green;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: 0.4s ease-in;
-}
-.hide_error{
-  position: absolute;
-  top: 10px;
-  width: 50%;
-  height: 40px;
-  border: 5px;
-  padding: 5px 10px;
-  background-color: sandybrown;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: 0.4s ease-in;
-}
-.wrapper{
-  width: 70%;
-  height: 40px;
-  background: white;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  margin-top: 1rem;
-  position: relative;
-  justify-content: center;
-  border-radius: 10px;
-  border-bottom: 1px solid silver;
-}
-.input-data{
-  width: 90%;
-}
-.view{
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-}
-input{
-  width: 90%;
-  border: none;
-  padding: 10px;
-  outline: none;
-  border-bottom: 1px solid silver;
-}
-.icon_font{
-  position: absolute;
-  left: 10px;
-  display: flex;
-  top: 10px;
-  align-items: center;
-  color: tomato;
+section > h2 {
+  color: var(--color-primary);
+  margin-bottom: 3rem;
 }
 
-.login_btn{
-  padding: 10px 20px;
-  width: 200px;
-  margin-top: 1rem;
-  border: none;
-  background-color: tomato;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
+.text-light {
+  color: var(--color-light);
 }
 
-.close_btn{
-  padding: 10px;
-  background-color: tomato;
-  color: white;
-  font-size: 20px;
+a {
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--color-white);
+}
+
+.btn {
+  width: max-content;
+  display: inline-block;
+  color: var(--color-primary);
+  border-radius: 0.4rem;
   cursor: pointer;
-  margin: 0;
+  padding: 0.75rem 1.2rem;
+  border: 1px solid var(--color-primary);
+  transition: var(--transition);
 }
-.error_icon{
-  color: white;
-  font-size: 20px;
+
+.btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-bg);
+  border-color: transparent;
 }
+
+.btn-primary{
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+img{
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+
+/* ==========================MEDIAQUERY============================== */
+@media screen and(max-width:1024px){
+  .container{
+    width: var(--container-width-md);
+  }
+  section > h2{
+    margin-top: 2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
